@@ -1,0 +1,31 @@
+https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/search-sql2-for-jcr-with-tags/m-p/288294
+
+SELECT * FROM [nt:base] AS s WHERE ISDESCENDANTNODE([/content/icici-prudential-life-insurance/]) and s.[cq:tags] like '%icici-pru:noindex%'
+
+SELECT * FROM [nt:base] AS s WHERE ISDESCENDANTNODE([/content/geometrixx-outdoors/en]) and s.[cq:tags] like '%apparel%'
+
+
+
+https://www.aemquickstart.in/2015/11/jcr-sql2-queries-for-aem-adobe-cq.html
+
+https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/crx-sql2-query-works-in-aem-6-1-but-not-in-6-4/qaq-p/280394
+
+SELECT * FROM [cq:PageContent] WHERE [jcr:title] = ''
+
+SELECT * FROM [nt:base] AS s WHERE ISDESCENDANTNODE([/content/icici-prudential-life-insurance]) and s.[jcr:primaryType]='cq:PageContent' and s.[jcr:ownerId] = 58
+
+http://172.30.65.139:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dsettings%2Ctype%3DQueryEngineSettings
+
+
+https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/the-query-read-or-traversed-more-than-100000-nodes-to-avoid/td-p/357042
+
+http://oakutils.appspot.com/generate/index
+
+http://localhost:6500/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dsettings%2Ctype%3DQueryEngineSettings
+
+
+https://gist.github.com/floriankraft/8b3720464318cd5cd9e2
+
+SELECT * FROM [dam:Asset] AS node WHERE ISDESCENDANTNODE(node,"/content/dam/icicipru")
+
+SELECT * FROM [sling:OrderedFolder] AS node WHERE ISDESCENDANTNODE(node,"/content/dam/icicipru")
